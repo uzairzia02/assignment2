@@ -3,20 +3,30 @@
 @tailwind utilities;
 
 .navbar {
- background-color: black;
- color: white;
- display: flex;
- 
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
 }
 
 .navbar-items {
   display: flex;
   gap: 25px;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-size: 30px;
   margin-left: auto;
   margin-right: 50px;
+  font-size: 18px;
+}
+
+.navbar-items a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-items li {
+  list-style: none;
+  cursor: pointer;
+  font-size: 30px;
 }
 
 .mainContainer-of-Home-Page {
@@ -57,14 +67,16 @@
 
 .mainContainer-of-professional-Page {
   background: linear-gradient(black, rgb(189, 189, 189));
-  height: 1109px;
+  height: auto; /* Allow height to adjust based on content */
   color: white;
+  padding: 20px; /* Add padding for better spacing */
 }
 
 .main-Container-Contact {
   background: linear-gradient(black, rgb(189, 189, 189));
   height: 1109px;
   color: white;
+  padding: 20px;
 }
 
 .Professional-Summary-Heading {
@@ -109,3 +121,183 @@
 
 
 
+/* Base styles remain unchanged */
+
+/* Small screens (sm: 640px) */
+@media (max-width: 639px) {
+  .mainContainer-of-Home-Page {
+    flex-direction: column; /* Stack vertically */
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .descriptionAboutMe {
+    width: 100%; /* Take full width */
+    padding: 10px;
+    font-size: 18px; /* Smaller font size for readability */
+  }
+
+  .homePageImage {
+    width: 100%; /* Full width for the image container */
+    max-height: 300px; /* Limit the height */
+    display: flex;
+    justify-content: center;
+  }
+
+  .homePageImage img {
+    width: auto;
+    height: 100%; /* Maintain aspect ratio */
+  }
+
+  .uzair-zia {
+    font-size: 30px; /* Adjust for smaller screens */
+  }
+}
+
+/* Medium screens (md: 768px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .mainContainer-of-Home-Page {
+    flex-direction: row; /* Horizontal layout */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .descriptionAboutMe {
+    width: 60%; /* Adjust width */
+    padding: 20px;
+    font-size: 24px;
+  }
+
+  .homePageImage {
+    width: 40%; /* Allocate space for the image */
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .homePageImage img {
+    width: auto;
+    height: 100%; /* Maintain aspect ratio */
+  }
+
+  .uzair-zia {
+    font-size: 40px; /* Adjust font size */
+  }
+}
+
+@media (max-width: 639px) {
+  .navbar {
+    flex-direction: column; /* Stack the navbar items */
+    align-items: flex-start; /* Align to the left */
+    padding: 10px;
+  }
+
+  .navbar-items {
+    flex-direction: row; /* Stack items vertically */
+    gap: 15px; /* Reduce gap */
+    margin: 0; /* Reset margins */
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .navbar-items li {
+    padding: 5px 0; /* Add spacing between items */
+    font-size: 10px;
+  }
+}
+
+/* Medium screens (md: 768px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .navbar {
+    padding: 15px 30px; /* Add more padding */
+  }
+
+  .navbar-items {
+    gap: 20px; /* Slightly reduce gap */
+    font-size: 16px; /* Adjust font size */
+  }
+}
+
+@media (max-width: 639px) {
+  .Professional-Summary-Heading {
+    font-size: 32px; /* Smaller font for small screens */
+    padding: 10px;
+  }
+  .Professional-Summary-Description {
+    font-size: 18px; /* Smaller font for small screens */
+    padding: 20px; /* Reduced padding */
+  }
+  .experience-Description {
+    font-size: 18px; /* Smaller font for small screens */
+    padding: 20px; /* Reduced padding */
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .Professional-Summary-Heading {
+    font-size: 50px; /* Adjust font size for medium screens */
+    padding: 50px;
+  }
+  .experience-Description {
+    color: white;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    text-align: justify;
+    padding: 90px;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Grande', Geneva, Verdana, sans-serif;
+    line-height: 1.6; /* Improve readability */
+  }
+
+  .Professional-Summary-Description {
+    color: white;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    text-align: justify;
+    padding: 90px;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Grande', Geneva, Verdana, sans-serif;
+    line-height: 1.6; /* Improve readability */
+  }
+}
+
+.contact-info-list {
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  padding: 80px;
+  font-weight: bolder;
+  font-style: italic;
+  list-style-type: none;
+  margin: 0;
+}
+
+/* Adjust contact info for smaller screens */
+@media (max-width: 639px) {
+  .contact-info-list {
+    font-size: 20px; /* Smaller font size */
+    padding: 20px; /* Reduced padding */
+    text-align: left; /* Align text to the left */
+  }
+
+  .contact-info-list li {
+    margin-bottom: 10px; /* Add spacing between items */
+  }
+
+  .contact-info-list a {
+    word-break: break-word; /* Prevent overflow for long links */
+  }
+}
+
+/* Adjust contact info for medium screens */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .contact-info-list {
+    font-size: 40px; /* Moderate font size for medium screens */
+    padding: 40px;
+  }
+
+  .contact-info-list li {
+    margin-bottom: 15px;
+  }
+}
