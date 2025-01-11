@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 .navbar {
   background-color: black;
   color: white;
@@ -31,31 +34,35 @@
 
 .mainContainer-of-Home-Page {
   background: linear-gradient(black, rgb(189, 189, 189));
-  height: 1064px;
+  width: 100vw;
+  height: 100vh;
   display: flex;
 }
 
+
 .descriptionAboutMe {
   color: white;
-  width: 3000px;
-  height: 1000px;
+  width: 100%;
+  height: 100vh;
   align-content: center;
- padding-left: 30px;
- padding-right: 30px;
- font-size: 50px;
- text-align: justify;
- font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- font-style: italic;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 50px;
+  text-align: justify;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
 }
 
+
+
 .homePageImage {
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 100vh;
 }
 
 .homePageImage img {
- width: 100%;
- height: 100%;
+  width: 100%;
+  height: 100vh;
 }
 
 .uzair-zia {
@@ -74,7 +81,7 @@
 
 .main-Container-Contact {
   background: linear-gradient(black, rgb(189, 189, 189));
-  height: 1109px;
+  height: 100vh;
   color: white;
   padding: 20px;
 }
@@ -90,23 +97,26 @@
 }
 
 .Professional-Summary-Description {
+  width: vw;
+  height: vh;
   color: white;
   font-size: 50px;
- display: flex;
- text-align: justify;
- padding: 90px;
- font-style: italic;
+  display: flex;
+  text-align: justify;
+  padding: 90px;
+  font-style: italic;
 }
 
 .experience-Description {
   color: white;
   font-size: 45px;
- display: flex;
- text-align: justify;
- padding: 90px;
- font-style: italic;
+  display: flex;
+  text-align: justify;
+  padding: 90px;
+  font-style: italic;
 }
 
+/* above done */
 
 .contact-info-list {
   color: white;
